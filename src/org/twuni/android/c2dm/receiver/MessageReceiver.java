@@ -42,6 +42,9 @@ public class MessageReceiver extends BroadcastReceiver {
 
 		Notification notification = new Notification( iconResourceId, content, System.currentTimeMillis() );
 
+		notification.flags |= Notification.FLAG_AUTO_CANCEL;
+		notification.defaults |= Notification.DEFAULT_ALL;
+
 		PendingIntent pendingIntent = PendingIntent.getActivity( context, 0, new Intent( context, activityToLaunch ), PendingIntent.FLAG_UPDATE_CURRENT );
 
 		notification.setLatestEventInfo( context, title, content, pendingIntent );
