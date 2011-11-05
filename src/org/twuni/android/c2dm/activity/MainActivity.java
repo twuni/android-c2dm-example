@@ -11,8 +11,10 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.twuni.android.c2dm.R;
+import org.twuni.android.c2dm.service.MessageService;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.Settings.Secure;
@@ -24,6 +26,7 @@ public class MainActivity extends Activity {
 	protected void onCreate( Bundle savedInstanceState ) {
 		super.onCreate( savedInstanceState );
 		setContentView( R.layout.main );
+		startService( new Intent( this, MessageService.class ) );
 	}
 
 	@Override
