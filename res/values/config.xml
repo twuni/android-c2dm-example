@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+	<string name="c2dm_sender">devin@twuni.org</string>
+	<string name="c2dm_registration_url">http://c2dm.twuni.org/register</string>
+
+</resources>
